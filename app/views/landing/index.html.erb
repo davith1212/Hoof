@@ -1,0 +1,41 @@
+<div class="base">
+	<div class="container">
+		<div class="row">
+			<div class="col l8">
+				<video class="responsive-video vid" autoplay>
+		  			<source src="http://oldnao.com/ArtHoof.mp4" type="video/mp4">
+				</video>
+			</div>
+			<div class="col l4">
+				<div class="view view-tenth">
+					<img class="responsive-img" src="http://media4.popsugar-assets.com/files/2015/04/30/709/n/1922398/55af68aa_main-image.xxxlarge_2x.jpg" />
+					<div class="mask"></div>
+					<div class="content col l12">
+						<h2>About Us</h2>
+						<p>Discover your full potential and see what the new you can accomplish!</p>
+						<a href="/about" class="info btn">Read More</a>
+					</div>
+				</div>
+				<div class="view view-tenth">
+					<img class="responsive-img" src="http://static1.squarespace.com/static/53a828b7e4b01786c9227adf/t/54384a7ce4b0692d36860f9d/1412975228817/" />
+					<div class="mask"></div>
+					<div class="content col l12">
+						<form action="/sessions/create" method="post">
+							<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+							<h2>Log In Here</h2>
+								<div class="input-field">
+									<p id="email"><input type="text" name="email" class="browser-default" placeholder="Email"></p>
+								</div>
+								<div class="input-field">
+									<p id="password"><input type="password" name="password" placeholder="Password"></p>
+								</div>
+								<!-- <a href="/homepages/2" class="info btn">Log In</a> -->
+							<input type="submit" class="info btn" value="Log In"> 
+							<input type="submit" class="info btn" formaction="/users/new" formmethod="get" value="Register Here">
+						</form>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>	
+</div>

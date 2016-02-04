@@ -1,0 +1,75 @@
+<div class="base">
+	<div class="container valign-wrapper">
+
+		<div class="row">
+      <h4 class="col s4 offset-s4">Registration</h4>
+      <form class="col s4 offset-s4" action="/users" method="post">
+        <div class="section">
+          <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+          <label for="f_name">First Name</label>
+          <input type="text" name="user[f_name]" id="f_name">
+
+          <label for="l_name">Last Name</label>
+          <input type="text" name="user[l_name]" id="last_name">
+
+          <label for="email">Email</label>
+          <input type="text" name="user[email]" id="email">
+
+          <label for="password">Password</label>
+          <input type="password" name="user[password]" id="password">
+
+          <label for="password_confirmation">Password Confirmation</label>
+          <input type="password" name="user[password_confirmation]" id="password_confirmation">
+
+          <label for="birthday">Birthday</label>
+          <input type="date" name="user[birthday]" id="birthday">
+
+        </div>
+        <div class="row">
+          <label>Fitness Goals</label>
+          <div class="input-field col s12">
+            <select  id="fitness_goals" name="user[fitness_goals]" multiple>
+              <option value="" disabled selected>Choose many options</option>
+              <option value="Be more active"               >Be more active</option>
+              <option value="Eat more fruit and vegetables">Eat more fruit and vegetables</option>
+              <option value="Try a new form of exercise"   >Try a new form of exercise</option>
+              <option value="Perfect your portion control" >Perfect your portion control</option>
+              <option value="Improve diet"                 >Improve diet</option>
+              <option value="Tone up"                      >Tone up</option>
+              <option value="Get stronger"                 >Get stronger</option>
+            </select>
+          </div>
+
+          <div class="row">
+          <label>Life Style</label>
+          <div class="input-field col s12">
+            <select id="lifestyle" name="user[lifestyle]">
+              <option value="" disabled selected>Choose your option</option>
+              <option value="sedentary"  >Sedentary</option>
+              <option value="moderate"   >Moderate</option>
+              <option value="active"     >Active</option>
+              <option value="athletic"   >Athletic</option>
+              <option value="restrictive">Restrictive</option>
+            </select>
+          </div>
+
+          <div class="row">
+          <label>Organization Beneficiary</label>
+          <div class="input-field col s12">
+            <select id="organization" name="user[organization]">
+              <option value="" disabled selected>Choose your option</option>
+              <option value="Earthjustice">Earthjustice</option>
+              <option value="Sgt. Pepper's Friends">Sgt. Pepper's Friends</option>
+              <option value="Stand Up for Kids">Stand Up for Kids</option>
+              <option value="Fourth World Love">Fourth World Love</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <button type="submit" class="btn">Register</button>
+        </div>
+      </form>
+		</div>
+	</div>
+</div>
